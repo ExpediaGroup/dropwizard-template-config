@@ -2,14 +2,24 @@
 
 ## 2.0.0
 
-### Changes
+### Added
 
-- Rename artifact groupId from `de.thomaskrille` to `com.expediagroup.dropwizard`
-- Rename package from `de/thomaskrille/dropwizard_template_config` to `com/expediagroup/dropwizard/bundle/configuration/freemarker`
+- `com.expediagroup.dropwizard.bundle.configuration.freemarker.Providers` utility class to create `TemplateConfigVariablesProvider` objects
+in various ways
+
+### Changed
+
+- Renamed artifact groupId from `de.thomaskrille` to `com.expediagroup.dropwizard`
+- Renamed package from `de.thomaskrille.dropwizard_template_config` to `com.expediagroup.dropwizard.bundle.configuration.freemarker`
+- Environment variables and system properties are now accessed exclusively through its namespace instead of also as a top-level variable for explicitness
 
 ### Removed
 
-- Removed shaded freemarker classes
+- Shaded freemarker classes
+- Dependency on guava
+- `EnvironmentProvider`, `SystemPropertiesProvider`, `DefaultEnvironmentProvider`, `DefaultSystemPropertiesProvider` in favor
+of using a single interface (`TemplateConfigVariablesProvider`) for environment variables and system properties
+- Removed deprecated `includePath()` methods in `TemplateConfigBundleConfiguration`
 
 ## 1.5.0 (2017-02-19)
 
