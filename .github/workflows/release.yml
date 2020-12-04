@@ -23,14 +23,14 @@ jobs:
           gpg-passphrase: GPG_PASSPHRASE # env variable for GPG private key passphrase
 
       - name: Build library
-        run: mvn clean build
+        run: ./mvnw clean build
 
       - name: Publish library
         run: |
           NEW_VERSION=$(echo "${GITHUB_REF}" | cut -d "/" -f3)
           echo "New version: ${NEW_VERSION}"
-          mvn org.codehaus.mojo:versions-maven-plugin:2.7:set -DnewVersion=${NEW_VERSION}
-          mvn -DskipTests -Prelease -B deploy
+          ./mvnw org.codehaus.mojo:versions-maven-plugin:2.7:set -DnewVersion=${NEW_VERSION}
+          ./mvnw -DskipTests -Prelease -B deploy
         env:
           SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
           SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
