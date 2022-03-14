@@ -10,6 +10,7 @@ In fact, this project is the successor to the fabulous [dropwizard-environment-c
 dropwizard-template-config | Dropwizard v1.3.x  | Dropwizard v2.0.x
 -------------------------- | ------------------ | ------------------
 v2.0.x                     | :white_check_mark: | :white_check_mark:
+v3.0.x                     | :white_check_mark: | :white_check_mark:
 
 ## Setup
 
@@ -19,7 +20,7 @@ First add the dependency to your POM:
 <dependency>
     <groupId>com.expediagroup.dropwizard</groupId>
     <artifactId>dropwizard-template-config</artifactId>
-    <version>2.0.0</version>
+    <version>3.0.0</version>
 </dependency>
 ```
 
