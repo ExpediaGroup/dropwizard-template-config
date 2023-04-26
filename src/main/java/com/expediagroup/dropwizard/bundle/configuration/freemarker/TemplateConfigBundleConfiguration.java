@@ -13,7 +13,10 @@ import java.util.stream.Collectors;
 
 /**
  * The configuration for a {@link TemplateConfigBundle}
+ *
+ * @deprecated See <a href="https://github.com/ExpediaGroup/dropwizard-template-config/blob/master/README.md">README.md</a>
  */
+@Deprecated
 public class TemplateConfigBundleConfiguration {
 
     private Charset charset = StandardCharsets.UTF_8;
@@ -33,7 +36,9 @@ public class TemplateConfigBundleConfiguration {
      * Initialize the {@link TemplateConfigBundle} with a custom set of {@link TemplateConfigVariablesProvider} instances.
      *
      * @param providers One or more {@link TemplateConfigurationSourceProvider} to use as custom providers
+     * @deprecated See <a href="https://github.com/ExpediaGroup/dropwizard-template-config/blob/master/README.md">README.md</a>
      */
+    @Deprecated
     TemplateConfigBundleConfiguration(TemplateConfigVariablesProvider... providers) {
         if (Arrays.asList(providers).contains(null)) {
             throw new NullPointerException("List of TemplateConfigVariablesProviders contains null");
@@ -44,7 +49,9 @@ public class TemplateConfigBundleConfiguration {
     /**
      * Initialize the {@link TemplateConfigBundle} with the default set of {@link TemplateConfigVariablesProvider} instances,
      * that is the provider that populates from System properties, and the provider that populates from Environment properties.
+     * @deprecated See <a href="https://github.com/ExpediaGroup/dropwizard-template-config/blob/master/README.md">README.md</a>
      */
+    @Deprecated
     public TemplateConfigBundleConfiguration() {
         this(Providers.fromSystemProperties(), Providers.fromEnvironmentProperties());
     }
