@@ -1,4 +1,7 @@
-# Dropwizard Template Config
+# Dropwizard Template Config (DEPRECATED)
+
+**DEPRECATED: We no longer maintain dropwizard-template-config. If you have questions or concerns, please open an issue
+or fork this repository.**
 
 A Dropwizard Bundle that allows you to write your `config.yaml` as a [Freemarker](http://freemarker.org) template.
 This is especially useful when you need to access environment variables or system properties.

@@ -11,14 +11,20 @@ import io.dropwizard.setup.Environment;
  * {@link TemplateConfigurationSourceProvider}
  * that allows you to write your {@code config.yaml} as a
  * <a href="http://freemarker.org/">Freemarker</a> template.
+ *
+ * @deprecated See <a href="https://github.com/ExpediaGroup/dropwizard-template-config/blob/master/README.md">README.md</a>
  */
+@Deprecated
 public class TemplateConfigBundle<T extends Configuration> implements ConfiguredBundle<T> {
 
     private final TemplateConfigBundleConfiguration configuration;
 
     /**
      * Create a {@link TemplateConfigBundle} using the default configuration.
+     *
+     * @deprecated See <a href="https://github.com/ExpediaGroup/dropwizard-template-config/blob/master/README.md">README.md</a>
      */
+    @Deprecated
     public TemplateConfigBundle() {
         this(new TemplateConfigBundleConfiguration());
     }
@@ -27,7 +33,9 @@ public class TemplateConfigBundle<T extends Configuration> implements Configured
      * Create a {@link TemplateConfigBundle} using the given {@link TemplateConfigBundleConfiguration}.
      *
      * @param configuration The configuration for the new bundle. See {@link TemplateConfigBundleConfiguration}.
+     * @deprecated See <a href="https://github.com/ExpediaGroup/dropwizard-template-config/blob/master/README.md">README.md</a>
      */
+    @Deprecated
     public TemplateConfigBundle(final TemplateConfigBundleConfiguration configuration) {
         this.configuration = configuration;
     }
